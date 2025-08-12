@@ -1,0 +1,31 @@
+{
+  "name": "character-sheet-5e",
+  "version": "1.0.0",
+  "description": "Ficha de personagem dnd 5e",
+  "license": "ISC",
+  "author": "Rhuan Lucas",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --config ./webpack.config.js --mode development",
+    "build": "webpack --mode production",
+    "test": "jest"
+  },
+  "dependencies": {
+    "css-loader": "^7.1.2",
+    "file-loader": "^6.2.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.90.0",
+    "webpack": "^5.101.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.0",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/preset-env": "^7.28.0",
+    "@babel/preset-react": "^7.27.1",
+    "babel-loader": "^10.0.0"
+  }
+}
