@@ -1,9 +1,13 @@
 import React, { Component } from "react";
-import { render } from "react-dom";
+import Traits from "../Traits/Traits";
 
 class CharacterSheet extends Component {
   render() {
-    return <div className="CharacterSheet">Hello World!</div>;
+    return (
+      <div className="CharacterSheet">
+        <Traits />
+      </div>
+    );
   }
 }
 

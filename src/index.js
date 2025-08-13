@@ -1,12 +1,18 @@
 import React from "react";
+import { Provider } from "react-redux";
+import store from "./js/store/store";
 import ReactDOM from "react-dom/client"; // <-- aqui mudou
-import CharacterSheet from "./Components/Character/CharacterSheet";
+import CharacterSheet from "../src/Components/Character/CharacterSheet";
+
+window.store = store;
 
 function Layout() {
   return (
-    <div className="Layout">
-      <CharacterSheet />
-    </div>
+    <Provider store={store}>
+      <div className="Layout">
+        <CharacterSheet />
+      </div>
+    </Provider>
   );
 }
 
