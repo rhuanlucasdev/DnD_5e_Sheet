@@ -1,8 +1,10 @@
 import { combineReducers } from "redux";
 import traitsReducer from "./traitReducer";
+import uiReducer from "./uiReducer";
 
 const reducers = {
   traits: traitsReducer,
+  ui: uiReducer,
 };
 
 const reducer = combineReducers(reducers);

@@ -1,4 +1,5 @@
 const webpack = require("webpack");
+const path = require("path");
 
 module.exports = {
   entry: "./src/index.js",
@@ -15,32 +16,26 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: [
-          {
-            loader: "style-loader",
-          },
-          {
-            loader: "css-loader",
-          },
-          {
-            loader: "sass-loader",
-          },
-        ],
+        use: ["style-loader", "css-loader", "sass-loader"],
       },
     ],
   },
   resolve: {
     extensions: [".*", ".js", ".jsx"],
+    fallback: {
+      url: require.resolve("url/"),
+      path: require.resolve("path-browserify"),
+    },
   },
   output: {
-    path: __dirname + "/dist",
+    path: path.resolve(__dirname, "dist"),
     publicPath: "/",
     filename: "bundle.js",
   },
   plugins: [new webpack.HotModuleReplacementPlugin()],
   devServer: {
     static: {
-      directory: __dirname + "/dist", // substitui contentBase
+      directory: path.resolve(__dirname, "dist"),
     },
     hot: true,
   },

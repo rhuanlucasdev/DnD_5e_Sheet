@@ -13,6 +13,7 @@
   "dependencies": {
     "css-loader": "^7.1.2",
     "file-loader": "^6.2.0",
+    "path-browserify": "^1.0.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-redux": "^9.2.0",
@@ -20,6 +21,8 @@
     "redux-thunk": "^3.1.0",
     "resolve-url-loader": "^5.0.0",
     "sass": "^1.90.0",
+    "style-loader": "^4.0.0",
+    "url": "^0.11.4",
     "webpack": "^5.101.1",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.2"
